@@ -1,0 +1,44 @@
+{% extends "main.html" %} {% block content %}
+<style>
+  
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #fff; 
+  }
+
+  .button-container {
+    text-align: center; 
+    margin-top: 20px; 
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; 
+    outline: none; 
+  }
+
+  button:hover {
+    background-color: #2980b9; 
+    transform: scale(1.05); 
+  }
+</style>
+
+<h1>Want to know what's the best college for you...</h1>
+<div class="button-container">
+  <button id="menu-page-button">Let's Get Started</button>
+</div>
+
+<script>
+  document.getElementById("menu-page-button").onclick = function () {
+    location.href = "{% url 'menu_page' %}";
+  };
+</script>
+{% endblock %}
